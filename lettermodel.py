@@ -130,7 +130,7 @@ OPTIMIZER = nn.SGD
 # learning rate
 LEARNING_RATE = 0.1
 # batch size for stochastic mini-batch gradient descent method
-BATCH_SIZE = 100
+BATCH_SIZE = 50
 # number of training epochs 
 MAX_EPOCHS = 20
 
@@ -138,7 +138,7 @@ MAX_EPOCHS = 20
 
 # Step 2: load data
 print("Loading data...")
-DB = data.load_mnist("data/mnist", batch_size=BATCH_SIZE)
+DB = data.load_mnist("data/not_mnist", batch_size=BATCH_SIZE)
 # notMNIST is a more challenging dataset to classify the
 # alphabetic letters from a to j.
 # DB = data.load_mnist("data/not_mnist", batch_size=BATCH_SIZE)
@@ -165,9 +165,9 @@ class Model(object):
         #######################################################################
         self.param = {
            # "name": nn.parameter(blah, blah)
-           "w0":nn.parameter.from_numpy(numpy.random.normal(0, 0.01, [n_features,250])),
-           "b0":nn.parameter.zeros([250]) ,
-           "w1":nn.parameter.from_numpy(numpy.random.normal(0, 0.01,[250, 500])),
+           "w0":nn.parameter.from_numpy(numpy.random.normal(0, 0.01, [n_features,800])),
+           "b0":nn.parameter.zeros([800]) ,
+           "w1":nn.parameter.from_numpy(numpy.random.normal(0, 0.01,[800, 500])),
            "b1":nn.parameter.zeros([500]),
            "w2":nn.parameter.from_numpy(numpy.random.normal(0, 0.01,[500, 250])),
            "b2":nn.parameter.zeros([250]),

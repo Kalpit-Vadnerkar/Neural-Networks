@@ -205,11 +205,11 @@ class Model(object):
         #######################################################################
         "*** YOUR CODE HERE ***"
         #logits = None
-        z0=nn.relu(nn.matmul(x, self.param["w0"]) + self.param["b0"])
-        z1=nn.relu(nn.matmul(z0, self.param["w1"]) + self.param["b1"])
-        z2=nn.relu(nn.matmul(z1, self.param["w2"]) + self.param["b2"])
-        z3=nn.relu(nn.matmul(z2, self.param["w3"]) + self.param["b3"])
-        logits=nn.matmul(z3, self.param["w4"]) + self.param["b4"]
+        z0 = nn.relu(nn.matmul(x, self.param["w0"]) + self.param["b0"])
+        z1 = nn.relu(nn.matmul(z0, self.param["w1"]) + self.param["b1"])
+        z2 = nn.relu(nn.matmul(z1, self.param["w2"]) + self.param["b2"])
+        z3 = nn.relu(nn.matmul(z2, self.param["w3"]) + self.param["b3"])
+        logits = nn.matmul(z3, self.param["w4"]) + self.param["b4"]
         #######################################################################
         
         return logits
